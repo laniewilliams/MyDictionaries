@@ -10,7 +10,9 @@ def main():
 
 
     # Deal the cards.
-    deal_cards(deck, num_cards)
+    deal_cards(deck,num_cards)
+
+    
 
     
     
@@ -52,31 +54,47 @@ def create_deck():
 # The deal_cards function deals a specified number of cards
 # from the deck.
 
-def deal_cards(deck, number):
+def deal_cards(deck, num_cards):
     # Initialize an accumulator for the hand value.
-    hand_value = 0
+    hand = 0
+    
     
     
 
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck.
-    if number > len(deck):
-        number = len(deck)
+    if num_cards > 52:
+        print('Too many cards. Please try again')
+        num_cards = 52
     
     
 
     # Deal the cards and accumulate their values.
-    for x in range(number):
-        card, value = deck.popitem()
+    import random
+    
+    for i in range(num_cards):
+        name_card = random.choice(list(deck))
+        hand += deck[name_card]
+        print(name_card)
+
+        del deck[name_card]
+    
+    
+    
+    '''
+    #for count in range(num_card):
+        card = random.choice(list(deck))
+        value = deck[card]
         print(card)
         hand_value += value
-    
+
+        del deck[card]
 
 
-    
+    '''
 
     # Display the value of the hand.
-    print('Value of this hand:', hand_value)
+    print('The value of the hand is', hand,'.')
     
     
 

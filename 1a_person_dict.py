@@ -17,10 +17,10 @@ person['pets'] = {'dog': 'Fido', 'cat': 'Sox'}
 #print(person['pets']['cat'])
 
 
-#for i in person['children']:
-#     print(i)
+for i in person['children']:
+     print(i)
 
-for i,j in person['pets'].items():
+for i, j in person['pets'].items():
      print(i)
      
 
