@@ -52,3 +52,10 @@ codes = {'A':'!',
              'z':'h'}
 
 text = open('info_security.txt','r')
+encryption = open('encrypted.txt','w')
+
+output = ""
+
+for letter in text:
+    if letter in codes:
+        output += codes[letter]
