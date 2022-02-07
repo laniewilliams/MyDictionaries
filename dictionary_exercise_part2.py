@@ -54,13 +54,19 @@ codes = {'A':'!',
 text = open('info_security.txt','r')
 read_text = text.read()
 print(read_text)
-#encryption = open('encrypted.txt','w')
+encryption = open('encrypted.txt','w')
 
 output = ""
 
 for letter in read_text:
     if letter in codes:
         output += codes[letter]
+    else:
+        output += letter
 print(output)
 
 text.close()
+
+encryption.write(output)
+
+encryption.close()
