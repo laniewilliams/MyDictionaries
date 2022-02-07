@@ -53,8 +53,7 @@ codes = {'A':'!',
 
 text = open('info_security.txt','r')
 read_text = text.read()
-print(read_text)
-encryption = open('encrypted.txt','w')
+
 
 output = ""
 
@@ -67,6 +66,7 @@ print(output)
 
 text.close()
 
+encryption = open('encrypted.txt','w')
 encryption.write(output)
 
 encryption.close()
