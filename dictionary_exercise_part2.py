@@ -6,7 +6,7 @@ codes = {'A':'!',
              'c':'^',
              'D':'&',
              'd':'*',
-             'E':'-',
+             'E':'j',
              'e':'+',
              'F':'=',
              'f':'<',
@@ -28,11 +28,11 @@ codes = {'A':'!',
              'n':']',
              'O':'{',
              'o':'}',
-             'P':'_',
-             'p':'|',
+             'P':'z',
+             'p':'v',
              'Q':':',
              'q':';',
-             'R':'o',
+             'R':'x',
              'r':'p',
              'S':'e',
              's':'b',
@@ -62,7 +62,6 @@ for letter in read_text:
         output += codes[letter]
     else:
         output += letter
-print(output)
 
 text.close()
 
